@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, Box, Typography, Divider, Container, Grid, TextField, Button } from '@material-ui/core'
+import { makeStyles, Box, Typography, Divider, Container, Grid, TextField, Button, Snackbar, SnackbarContent, Grow } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
     contactBox: {
@@ -47,11 +47,32 @@ const useStyles = makeStyles(() => ({
     submit: {
         marginTop: 20
     },
+    input: {
+        color: 'white'
+    },
+    snack: {
+        backgroundColor: '#A6B1E1',
+        color: 'black',
+        boxShadow: 'none',
+        
+    }
 }));
 
 const Contact = () => {
     const { contactBox, title, divider, contactItem, container, grid, contactTitle, contactForm,
-        submit } = useStyles();
+        submit, input, snack } = useStyles();
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleSubmit = () => {
+        setOpen(true);
+    }
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpen(false);
+    };
 
     const contactPage = () => {
         return (
@@ -68,6 +89,9 @@ const Contact = () => {
                                 variant='outlined'
                                 label='name'
                                 color='secondary'
+                                InputProps={{
+                                    className: input
+                                }}
                             />
                             <TextField
                                 fullWidth
@@ -76,6 +100,9 @@ const Contact = () => {
                                 variant='outlined'
                                 label='email'
                                 color='secondary'
+                                InputProps={{
+                                    className: input
+                                }}
                             />
                             <TextField
                                 fullWidth
@@ -86,17 +113,36 @@ const Contact = () => {
                                 color='secondary'
                                 multiline
                                 rows={4}
+                                InputProps={{
+                                    className: input
+                                }}
                             />
                         </div>
                         <Button
                             className={submit}
                             size='large'
                             variant='outlined'
-                            type='submit'
+                            type='reset'
                             color='secondary'
+                            onClick={handleSubmit}
                         >
                             submit
                         </Button>
+                        <Snackbar
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'center',
+                            }}
+                            open={open}
+                            autoHideDuration={6000}
+                            onClose={handleClose}
+                            TransitionComponent={Grow}
+                        >
+                            <SnackbarContent
+                            message="Message Submitted"
+                            className={snack}
+                            />
+                        </Snackbar>
                     </form>
                 </Container>
             </Box>

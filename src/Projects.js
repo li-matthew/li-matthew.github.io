@@ -1,7 +1,8 @@
 import React from 'react'
 import {
     makeStyles, Box, Typography, Divider, Container, Grid,
-    Card, CardActionArea, CardMedia, CardActions, CardContent, Button, IconButton
+    Card, CardActionArea, CardMedia, CardActions, CardContent, Button, IconButton,
+    Dialog, DialogTitle, DialogContent, DialogActions
 } from '@material-ui/core'
 import sandwichtime from './media/sandwichtime.png'
 import schedule from './media/schedule.png'
@@ -61,10 +62,40 @@ const useStyles = makeStyles(() => ({
             backgroundColor: "transparent"
         }
     },
+    dialogImage: {
+        width: 500,
+        display: 'block',
+        margin: 'auto',
+        paddingBottom: 16
+    }
 }));
 
 const Projects = () => {
-    const { projectBox, title, divider, gridTitle, container, grid, projectItem, cardImage, links } = useStyles();
+    const { projectBox, title, divider, gridTitle, container, grid, projectItem, cardImage, links, dialogImage } = useStyles();
+    const [projectOne, setProjectOne] = React.useState(false);
+    const [projectTwo, setProjectTwo] = React.useState(false);
+    const [projectThree, setProjectThree] = React.useState(false);
+    const [projectFour, setProjectFour] = React.useState(false);
+
+    const handleClose = () => {
+        setProjectOne(false)
+        setProjectTwo(false)
+        setProjectThree(false)
+        setProjectFour(false)
+    };
+
+    const handleProjectOne = () => {
+        setProjectOne(true)
+    }
+    const handleProjectTwo = () => {
+        setProjectTwo(true)
+    }
+    const handleProjectThree = () => {
+        setProjectThree(true)
+    }
+    const handleProjectFour = () => {
+        setProjectFour(true)
+    }
 
     const projectPage = () => {
         return (
@@ -93,12 +124,12 @@ const Projects = () => {
                                         </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="medium" color="secondary" variant='outlined'>
+                                    <Button size="medium" color="secondary" variant='outlined' onClick={handleProjectOne}>
                                         learn more
                                     </Button>
-                                    <Button size="medium" color="secondary" variant='outlined' href='https://li-matthew.github.io/visualizer/' target='_blank'>
+                                    {/* <Button size="medium" color="secondary" variant='outlined' href='https://li-matthew.github.io/visualizer/' target='_blank'>
                                         view
-                                    </Button>
+                                    </Button> */}
                                     <IconButton
                                         className={links}
                                         disableRipple
@@ -133,7 +164,7 @@ const Projects = () => {
                                         </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="medium" color="secondary" variant='outlined'>
+                                    <Button size="medium" color="secondary" variant='outlined' onClick={handleProjectTwo}>
                                         learn more
                                     </Button>
                                 </CardActions>
@@ -159,7 +190,7 @@ const Projects = () => {
                                         </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="medium" color="secondary" variant='outlined'>
+                                    <Button size="medium" color="secondary" variant='outlined' onClick={handleProjectThree}>
                                         learn more
                                     </Button>
                                     <IconButton
@@ -196,14 +227,103 @@ const Projects = () => {
                                         </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="medium" color="secondary" variant='outlined'>
+                                    <Button size="medium" color="secondary" variant='outlined' onClick={handleProjectFour}>
                                         learn more
                                     </Button>
                                 </CardActions>
                             </Card>
                         </Grid>
                     </Grid>
-
+                    <Dialog onClose={handleClose} open={projectOne} maxWidth='sm'>
+                        <DialogTitle onClose={handleClose}>
+                            <Typography variant="h4">
+                                sandwich time
+                            </Typography>
+                        </DialogTitle>
+                        <DialogContent>
+                            <img src={sandwichtime} className={dialogImage} />
+                            <Typography gutterBottom>
+                                A web application to visualize audio data received from the microphone.
+                                It also includes three different visualization styles with a variety of controls to customize the experience.
+                            </Typography>
+                            <Typography variant="body1" color="textSecondary" component="p">
+                                ExpressJS <span>&#8226;</span> HTML/CSS <span>&#8226;</span> SQL
+                            </Typography>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button variant='outlined' onClick={handleClose} color='secondary'>
+                                close
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
+                    <Dialog onClose={handleClose} open={projectTwo} maxWidth='sm'>
+                        <DialogTitle onClose={handleClose}>
+                            <Typography variant="h4">
+                                scheduling system
+                            </Typography>
+                        </DialogTitle>
+                        <DialogContent>
+                            <img src={schedule} className={dialogImage} />
+                            <Typography gutterBottom>
+                                A web application for professors, TAs, and students to schedule help sessions based on enrolled courses.
+                                Professors can add courses and help sessions for those courses as well as assign TAs to those sessions.
+                                Students can sign up for available help sessions for their enrolled courses.
+                            </Typography>
+                            <Typography variant="body1" color="textSecondary" component="p">
+                                ExpressJS <span>&#8226;</span> HTML/CSS <span>&#8226;</span> SQL
+                            </Typography>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button variant='outlined' onClick={handleClose} color='secondary'>
+                                close
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
+                    <Dialog onClose={handleClose} open={projectThree} maxWidth='sm'>
+                        <DialogTitle onClose={handleClose}>
+                            <Typography variant="h4">
+                                spotify classification
+                            </Typography>
+                        </DialogTitle>
+                        <DialogContent>
+                            <img src={spotify} className={dialogImage} />
+                            <Typography gutterBottom>
+                                A program that collects all tracks from your Spotify playlists and gets corresponding feature data from the Spotify API.
+                                Uses PCA and k-means to cluster them into different playlists based on said data.
+                                New tracks added to a specified playlist will be automatically classified and added to the correct cluster playlist.
+                            </Typography>
+                            <Typography variant="body1" color="textSecondary" component="p">
+                                        Python <span>&#8226;</span> scikit-learn <span>&#8226;</span> pandas <span>&#8226;</span> R <span>&#8226;</span> Spotify API
+                            </Typography>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button variant='outlined' onClick={handleClose} color='secondary'>
+                                close
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
+                    <Dialog onClose={handleClose} open={projectFour} maxWidth='sm'>
+                        <DialogTitle onClose={handleClose}>
+                            <Typography variant="h4">
+                                military expenditure
+                            </Typography>
+                        </DialogTitle>
+                        <DialogContent>
+                            <img src={anova} className={dialogImage} />
+                            <Typography gutterBottom>
+                                Collected data of yearly military expenditure from various countries. 
+                                Applied ANOVA on data to test hypotheses on future expenditures.
+                            </Typography>
+                            <Typography variant="body1" color="textSecondary" component="p">
+                                        R <span>&#8226;</span> ANOVA
+                            </Typography>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button variant='outlined' onClick={handleClose} color='secondary'>
+                                close
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
                 </Container>
             </Box>
         )

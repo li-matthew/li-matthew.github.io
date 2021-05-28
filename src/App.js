@@ -57,6 +57,22 @@ const theme = createMuiTheme({
         color: "#A6B1E1",
       },
     },
+    MuiSnackbarContent: {
+      root: {
+        justifyContent: 'center',
+      }
+    },
+    MuiDialogActions: {
+      root: {
+        justifyContent: 'left',
+        paddingLeft: 24
+      }
+    },
+    MuiCard: {
+      root: {
+        borderColor: '#A6B1E1',
+      }
+    },
   }
 })
 

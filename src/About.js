@@ -5,7 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import SaveAltRoundedIcon from '@material-ui/icons/SaveAltRounded';
-import resume from './media/MatthewLi-se.pdf'
+import viewResume from './media/MatthewLi-se.pdf'
 import DescriptionRoundedIcon from '@material-ui/icons/DescriptionRounded';
 
 const useStyles = makeStyles(() => ({
@@ -70,7 +70,7 @@ const About = () => {
                         <Grid item xs={4}>
                             <Typography variant='h4' className={gridTitle}>me</Typography>
                             <Typography variant='h6'>
-                                Hi, my name is Matthew Li
+                                Hi, my name is Matthew Li and I enjoy creating 
                             </Typography>
                             <Button
                                 className={resume}
@@ -78,7 +78,7 @@ const About = () => {
                                 color="secondary"
                                 size="medium"
                                 startIcon={<DescriptionRoundedIcon />}
-                                href={resume}
+                                href={viewResume}
                                 target='_blank'
                             >
                                 view resume

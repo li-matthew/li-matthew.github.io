@@ -27,12 +27,13 @@ const useStyles = makeStyles(() => ({
     skillItem: {
         textAlign: 'center',
         padding: 20,
+        fontWeight: 'bold'
     },
     container: {
         // padding: 20
     },
     mainGrid: {
-        paddingTop: 75
+        paddingTop: 75,
     },
     skillTitle: {
         textAlign: 'center',
@@ -65,15 +66,15 @@ const Skills = () => {
                         <Typography variant='h5' className={skillItem}>ReactJS</Typography>
                         </Grid>
                         <Grid item xs>
-                        <Typography variant='h5' className={skillItem}>HTML/CSS</Typography>
+                        <Typography variant='h5' className={skillItem}>JavaScript</Typography>
                         </Grid>
                     </Grid>
-                    <Typography variant='h4' className={skillTitle}>other</Typography>
+                    <Typography variant='h3' className={skillTitle}>other</Typography>
                     <Grid container spacing={2} justify='space-around' className={otherGrid}>
                         <Grid item xs={3}>
                         <ul>
                             <li><Typography>C/C++</Typography></li>
-                            <li><Typography>JavaScript</Typography></li>
+                            <li><Typography>HTML/CSS</Typography></li>
                             <li><Typography>SQL</Typography></li>
                             <li><Typography>R</Typography></li>
                             <li><Typography>jQuery</Typography></li>
