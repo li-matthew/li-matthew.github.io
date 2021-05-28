@@ -27,9 +27,10 @@ const useStyles = makeStyles(() => ({
         paddingTop: 75
     },
     divider: {
-        backgroundColor: 'black',
+        backgroundColor: '#A6B1E1',
         width: '15%',
-        margin: 10
+        margin: 10,
+        height: 3
     },
     gridTitle: {
         textAlign: 'center',

@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
         minHeight: 750,
         maxHeight: 1000,
         minWidth: 750,
-        backgroundColor: '#eeeeee'
+        backgroundColor: '#efefef'
         // position: 'relative',
     },
     title: {
@@ -19,9 +19,10 @@ const useStyles = makeStyles(() => ({
         paddingTop: 75
     },
     divider: {
-        backgroundColor: 'black',
+        backgroundColor: '#A6B1E1',
         width: '15%',
-        margin: 10
+        margin: 10,
+        height: 3
     },
     skillItem: {
         textAlign: 'center',

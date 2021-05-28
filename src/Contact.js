@@ -19,9 +19,10 @@ const useStyles = makeStyles(() => ({
         color: 'white'
     },
     divider: {
-        backgroundColor: 'white',
+        backgroundColor: '#A6B1E1',
         width: '15%',
-        margin: 10
+        margin: 10,
+        height: 3
     },
     contactItem: {
         textAlign: 'center',
@@ -41,6 +42,7 @@ const useStyles = makeStyles(() => ({
         width: '50%',
         margin: 'auto',
         paddingTop: 75,
+        transition: '0.5s'
     },
     submit: {
         marginTop: 20

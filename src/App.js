@@ -27,45 +27,34 @@ const theme = createMuiTheme({
         textTransform: 'none',
       },
     },
-    MuiTypography: {
-      h1: {
-        textTransform: 'lowercase',
-        color: 'white'
-      },
-      h2: {
-        textTransform: 'lowercase'
-      },
-      h3: {
-        textTransform: 'lowercase'
-      },
-      h4: {
-        textTransform: 'lowercase'
-      },
-    },
     MuiDivider: {
       color: '#ff0000'
     },
     MuiTextField: {
       root: {
+        
         '& label.Mui-focused': {
-          color: '#A6B1E1',
+          color: 'white',
         },
         '& .MuiOutlinedInput-root': {
+          
           '& fieldset': {
-            borderColor: 'white',
+            transition: '0.5s',
+            borderColor: '#A6B1E1',
           },
           '&:hover fieldset': {
             borderColor: 'white',
           },
           '&.Mui-focused fieldset': {
-            borderColor: '#A6B1E1',
+            borderColor: 'white',
+            borderWidth: 1
           },
         },
       },
     },
     MuiInputLabel: {
       root: {
-        color: "white",
+        color: "#A6B1E1",
       },
     },
   }

@@ -14,9 +14,10 @@ const useStyles = makeStyles(() => ({
         minHeight: 400,
     },
     divider: {
-        backgroundColor: 'white',
+        backgroundColor: '#A6B1E1',
         width: '25%',
-        margin: 10
+        margin: 10,
+        height: 2
     },
     toolBar: {
         marginTop: 100,
@@ -61,6 +62,10 @@ const useStyles = makeStyles(() => ({
         transition: '0.5s'
     },
     subtext: {
+        color: 'white',
+        paddingTop: 15
+    },
+    title: {
         color: 'white'
     }
     // active: {
@@ -93,7 +98,7 @@ const tabs = [
 ];
 
 const Home = () => {
-    const { homeBox, divider, toolBar, tabButton, sticky, list, active, subtext } = useStyles();
+    const { homeBox, divider, toolBar, tabButton, sticky, list, active, subtext, title } = useStyles();
     const [stick, setStick] = React.useState(false);
     const offset = window.innerHeight - 64
 
@@ -159,7 +164,7 @@ const Home = () => {
     const main = () => {
         return (
             <Box display='flex' className={homeBox} overflow='visible' id='home' bgcolor='primary.main'>
-                <Typography variant='h1'>matthew li</Typography>
+                <Typography variant='h1' className={title}>Matthew Li</Typography>
                 <Divider className={divider} />
                 <Typography variant='h4' className={subtext}>software engineer</Typography>
                 <div className={stick ? sticky : toolBar}>
