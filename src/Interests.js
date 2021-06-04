@@ -37,11 +37,15 @@ const useStyles = makeStyles(() => ({
     interestTitle: {
         textAlign: 'center',
         padding: 75
-    }
+    },
+    gridTitle: {
+        textAlign: 'center',
+        padding: 20
+    },
 }));
 
 const Interests = () => {
-    const { interestBox, title, divider, interestItem, container, grid, interestTitle } = useStyles();
+    const { interestBox, title, divider, interestItem, container, grid, interestTitle, gridTitle } = useStyles();
 
     const interestPage = () => {
         return (
@@ -49,8 +53,21 @@ const Interests = () => {
                 <Typography variant='h2' className={title}>interests</Typography>
                 <Divider className={divider} />
                 <Container className={container}>
-                    <Grid container spacing={2} justify='space-around' className={grid}>
-                        
+                <Grid container spacing={2} justify='space-around' className={grid}>
+                        <Grid item xs={4}>
+                            <Typography variant='h4' className={gridTitle}>music</Typography>
+                            <Typography variant='h6'>
+                                In my free time I enjoy simply listening to music to relax. 
+                                Sometimes I will even try producing my own music to share with friends.
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <Typography variant='h4' className={gridTitle}>basketball</Typography>
+                            <Typography variant='h6'>
+                                Since I was younger, I have always been an avid basketball fan and found myself playing the sport whenever I could.
+                                Nowadays, I still play occasionally with friends, as well as watch my favorite basketball team play in the NBA.
+                            </Typography>
+                        </Grid>
                     </Grid>
                 </Container>
             </Box>

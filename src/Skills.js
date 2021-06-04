@@ -55,7 +55,7 @@ const Skills = () => {
                 <Typography variant='h2' className={title}>skills</Typography>
                 <Divider className={divider} />
                 <Container className={container}>
-                    <Grid container spacing={4} justify='space-around' className={mainGrid}>
+                    <Grid container spacing={5} justify='space-around' className={mainGrid}>
                         <Grid item xs>
                         <Typography variant='h5' className={skillItem}>Java</Typography>
                         </Grid>
@@ -68,15 +68,17 @@ const Skills = () => {
                         <Grid item xs>
                         <Typography variant='h5' className={skillItem}>JavaScript</Typography>
                         </Grid>
+                        <Grid item xs>
+                        <Typography variant='h5' className={skillItem}>C++</Typography>
+                        </Grid>
                     </Grid>
                     <Typography variant='h3' className={skillTitle}>other</Typography>
                     <Grid container spacing={2} justify='space-around' className={otherGrid}>
                         <Grid item xs={3}>
                         <ul>
-                            <li><Typography>C/C++</Typography></li>
+                            <li><Typography>C</Typography></li>
                             <li><Typography>HTML/CSS</Typography></li>
                             <li><Typography>SQL</Typography></li>
-                            <li><Typography>R</Typography></li>
                             <li><Typography>jQuery</Typography></li>
                             <li><Typography>Bootstrap</Typography></li>
                             <li><Typography>Ruby on Rails</Typography></li>
@@ -89,7 +91,7 @@ const Skills = () => {
                             <li><Typography>MongoDB</Typography></li>
                             <li><Typography>NodeJS</Typography></li>
                             <li><Typography>SAS</Typography></li>
-                            <li><Typography>AWS</Typography></li>
+                            <li><Typography>R</Typography></li>
                         </ul>
                         </Grid>
                     </Grid>
