@@ -82,16 +82,18 @@ const Skills = () => {
                             <li><Typography>jQuery</Typography></li>
                             <li><Typography>Bootstrap</Typography></li>
                             <li><Typography>Ruby on Rails</Typography></li>
+                            <li><Typography>TypeScript</Typography></li>
                         </ul>
                         </Grid>
                         <Grid item xs={3}>
                         <ul>
-                            <li><Typography>AngularJS</Typography></li>
+                            <li><Typography>Angular</Typography></li>
                             <li><Typography>Django</Typography></li>
                             <li><Typography>MongoDB</Typography></li>
                             <li><Typography>NodeJS</Typography></li>
                             <li><Typography>SAS</Typography></li>
                             <li><Typography>R</Typography></li>
+                            <li><Typography>ExpressJS</Typography></li>
                         </ul>
                         </Grid>
                     </Grid>
