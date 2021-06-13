@@ -7,7 +7,7 @@ import {
 import sandwichtime from './media/sandwichtime.png'
 import schedule from './media/schedule.png'
 import spotify from './media/spotify.png'
-import anova from './media/anova.png'
+import todo from './media/todo.png'
 import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles(() => ({
@@ -203,11 +203,11 @@ const Projects = () => {
                             <Card variant='outlined'>
                                 <CardMedia
                                     className={cardImage}
-                                    image={anova}
+                                    image={todo}
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h4">
-                                        miltary expenditure
+                                        task tracker
                                         </Typography>
                                     {/* <Typography variant="body2" color="textSecondary" component="p">
                                         An app that takes microphone input and converts it into an audio visualization
@@ -215,13 +215,24 @@ const Projects = () => {
                                         <br></br>
                                         </Typography> */}
                                     <Typography variant="body1" color="textSecondary" component="p">
-                                        R <span>&#8226;</span> ANOVA
+                                        Python <span>&#8226;</span> Django <span>&#8226;</span> Bootstrap
                                         </Typography>
                                 </CardContent>
                                 <CardActions>
                                     <Button size="medium" color="secondary" variant='outlined' onClick={handleProjectFour}>
                                         learn more
                                     </Button>
+                                    <IconButton
+                                        className={links}
+                                        disableRipple
+                                        href='https://github.com/li-matthew/todoapp'
+                                        target='_blank'
+                                    >
+                                        <GitHubIcon
+                                            color='secondary'
+                                            fontSize='default'
+                                        />
+                                    </IconButton>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -285,7 +296,7 @@ const Projects = () => {
                                 New tracks added to a specified playlist will be automatically classified and added to the correct cluster playlist.
                             </Typography>
                             <Typography variant="body1" color="textSecondary" component="p">
-                                        Python <span>&#8226;</span> scikit-learn <span>&#8226;</span> pandas <span>&#8226;</span> R <span>&#8226;</span> Spotify API
+                                Python <span>&#8226;</span> scikit-learn <span>&#8226;</span> pandas <span>&#8226;</span> R <span>&#8226;</span> Spotify API
                             </Typography>
                         </DialogContent>
                         <DialogActions>
@@ -297,17 +308,17 @@ const Projects = () => {
                     <Dialog onClose={handleClose} open={projectFour} maxWidth='sm'>
                         <DialogTitle onClose={handleClose}>
                             <Typography variant="h4">
-                                military expenditure
+                                task tracker
                             </Typography>
                         </DialogTitle>
                         <DialogContent>
-                            <img src={anova} className={dialogImage} />
+                            <img src={todo} className={dialogImage} />
                             <Typography gutterBottom>
-                                Collected data of yearly military expenditure from various countries. 
-                                Applied ANOVA on data to test hypotheses on future expenditures.
+                                A to-do list application that keeps track of added tasks including due dates. Tasks can be added with a description, category and due date. 
+                                Once added, they can either be deleted or marked as complete.
                             </Typography>
                             <Typography variant="body1" color="textSecondary" component="p">
-                                        R <span>&#8226;</span> ANOVA
+                                Python <span>&#8226;</span> Django <span>&#8226;</span> Bootstrap
                             </Typography>
                         </DialogContent>
                         <DialogActions>

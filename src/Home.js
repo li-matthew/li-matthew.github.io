@@ -66,7 +66,7 @@ const useStyles = makeStyles(() => ({
         paddingTop: 15
     },
     title: {
-        color: 'white'
+        color: 'white',
     }
 }));
 
