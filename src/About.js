@@ -4,7 +4,6 @@ import purdueImage from './media/purdue.svg';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import SaveAltRoundedIcon from '@material-ui/icons/SaveAltRounded';
 import viewResume from './media/MatthewLi-se.pdf'
 import DescriptionRoundedIcon from '@material-ui/icons/DescriptionRounded';
 
@@ -47,13 +46,14 @@ const useStyles = makeStyles(() => ({
         paddingTop: 50,
     },
     links: {
-        paddingTop: 20,
         "&:hover": {
             backgroundColor: "transparent"
-        }
+        },
+        marginTop: 20,
     },
     resume: {
         marginTop: 20,
+        marginRight: 12,
     }
 }));
 
@@ -70,7 +70,8 @@ const About = () => {
                         <Grid item xs={4}>
                             <Typography variant='h4' className={gridTitle}>me</Typography>
                             <Typography variant='h6'>
-                                Hi, my name is Matthew Li and I enjoy creating 
+                                Hi, my name is Matthew Li and I am an experienced Full Stack Web Developer.
+                                I am also passionate about learning a variety of technologies and creating software and tools to help people.
                             </Typography>
                             <Button
                                 className={resume}
@@ -83,7 +84,7 @@ const About = () => {
                             >
                                 view resume
                             </Button>
-                            <br></br>
+                            {/* <br></br> */}
                             <IconButton
                             className={links}
                             disableRipple
@@ -92,7 +93,7 @@ const About = () => {
                             >
                                 <EmailRoundedIcon
                                     color='secondary'
-                                    fontSize='medium'
+                                    fontSize='default'
                                 />
                             </IconButton>
                             <IconButton
@@ -103,7 +104,7 @@ const About = () => {
                             >
                                 <LinkedInIcon
                                     color='secondary'
-                                    fontSize='medium'
+                                    fontSize='default'
                                 />
                             </IconButton>
                             <IconButton
@@ -114,7 +115,7 @@ const About = () => {
                             >
                                 <GitHubIcon
                                     color='secondary'
-                                    fontSize='medium'
+                                    fontSize='default'
                                 />
                             </IconButton>
                         </Grid>

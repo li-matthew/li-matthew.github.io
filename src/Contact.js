@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, Box, Typography, Divider, Container, Grid, TextField, Button, Snackbar, SnackbarContent, Grow } from '@material-ui/core'
+import { makeStyles, Box, Typography, Divider, Container, TextField, Button, Snackbar, SnackbarContent, Grow } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
     contactBox: {
@@ -24,19 +24,8 @@ const useStyles = makeStyles(() => ({
         margin: 10,
         height: 3
     },
-    contactItem: {
-        textAlign: 'center',
-        padding: 20,
-    },
     container: {
         textAlign: 'center'
-    },
-    grid: {
-        paddingTop: 75
-    },
-    contactTitle: {
-        textAlign: 'center',
-        padding: 75
     },
     contactForm: {
         width: '50%',
@@ -59,7 +48,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Contact = () => {
-    const { contactBox, title, divider, contactItem, container, grid, contactTitle, contactForm,
+    const { contactBox, title, divider, container, contactForm,
         submit, input, snack } = useStyles();
 
     const [open, setOpen] = React.useState(false);

@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './Home'
 import Skills from './Skills'
 import About from './About'
-import Section from './Section'
 import Projects from './Projects'
 import Interests from './Interests'
 import Contact from './Contact'
@@ -26,9 +24,6 @@ const theme = createMuiTheme({
       root: {
         textTransform: 'none',
       },
-    },
-    MuiDivider: {
-      color: '#ff0000'
     },
     MuiTextField: {
       root: {

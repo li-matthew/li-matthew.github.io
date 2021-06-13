@@ -24,19 +24,11 @@ const useStyles = makeStyles(() => ({
         margin: 10,
         height: 3
     },
-    interestItem: {
-        textAlign: 'center',
-        padding: 20,
-    },
     container: {
         // padding: 20
     },
     grid: {
         paddingTop: 75
-    },
-    interestTitle: {
-        textAlign: 'center',
-        padding: 75
     },
     gridTitle: {
         textAlign: 'center',
@@ -45,7 +37,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Interests = () => {
-    const { interestBox, title, divider, interestItem, container, grid, interestTitle, gridTitle } = useStyles();
+    const { interestBox, title, divider, container, grid, gridTitle } = useStyles();
 
     const interestPage = () => {
         return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import {
     makeStyles, Box, Typography, Divider, Container, Grid,
-    Card, CardActionArea, CardMedia, CardActions, CardContent, Button, IconButton,
+    Card, CardMedia, CardActions, CardContent, Button, IconButton,
     Dialog, DialogTitle, DialogContent, DialogActions
 } from '@material-ui/core'
 import sandwichtime from './media/sandwichtime.png'
@@ -33,10 +33,6 @@ const useStyles = makeStyles(() => ({
         margin: 10,
         height: 3
     },
-    gridTitle: {
-        textAlign: 'center',
-        padding: 20
-    },
     container: {
         // padding: 20,
         // paddingLeft: 100,
@@ -45,10 +41,6 @@ const useStyles = makeStyles(() => ({
     grid: {
         paddingTop: 75,
         overflow: 'hidden'
-    },
-    projectItem: {
-        textAlign: 'center',
-        padding: 20,
     },
     cardImage: {
         height: 200,
@@ -71,7 +63,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Projects = () => {
-    const { projectBox, title, divider, gridTitle, container, grid, projectItem, cardImage, links, dialogImage } = useStyles();
+    const { projectBox, title, divider, container, grid, cardImage, links, dialogImage } = useStyles();
     const [projectOne, setProjectOne] = React.useState(false);
     const [projectTwo, setProjectTwo] = React.useState(false);
     const [projectThree, setProjectThree] = React.useState(false);
@@ -138,7 +130,7 @@ const Projects = () => {
                                     >
                                         <GitHubIcon
                                             color='secondary'
-                                            fontSize='medium'
+                                            fontSize='default'
                                         />
                                     </IconButton>
                                 </CardActions>
@@ -201,7 +193,7 @@ const Projects = () => {
                                     >
                                         <GitHubIcon
                                             color='secondary'
-                                            fontSize='medium'
+                                            fontSize='default'
                                         />
                                     </IconButton>
                                 </CardActions>

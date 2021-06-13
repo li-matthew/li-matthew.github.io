@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Typography, makeStyles, Box, Divider, Toolbar, ButtonBase, AppBar } from '@material-ui/core'
+import { Typography, makeStyles, Box, Divider, ButtonBase } from '@material-ui/core'
 import { Link } from 'react-scroll'
 
 
@@ -68,10 +68,6 @@ const useStyles = makeStyles(() => ({
     title: {
         color: 'white'
     }
-    // active: {
-    //     color: 'yellow',
-    //     transition: '0.5s'
-    // },
 }));
 
 const tabs = [
@@ -98,7 +94,7 @@ const tabs = [
 ];
 
 const Home = () => {
-    const { homeBox, divider, toolBar, tabButton, sticky, list, active, subtext, title } = useStyles();
+    const { homeBox, divider, toolBar, tabButton, sticky, list, subtext, title } = useStyles();
     const [stick, setStick] = React.useState(false);
     const offset = window.innerHeight - 64
 
