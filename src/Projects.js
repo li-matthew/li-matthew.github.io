@@ -105,7 +105,7 @@ const Projects = () => {
                                 <CardContent>
                                     <Typography gutterBottom variant="h4">
                                         sandwich time
-                                        </Typography>
+                                    </Typography>
                                     {/* <Typography variant="body2" color="textSecondary" component="p">
                                         An app that takes microphone input and converts it into an audio visualization
                                         <br></br>
@@ -113,7 +113,7 @@ const Projects = () => {
                                         </Typography> */}
                                     <Typography variant="body1" color="textSecondary" component="p">
                                         ReactJS <span>&#8226;</span> WebAudio API
-                                        </Typography>
+                                    </Typography>
                                 </CardContent>
                                 <CardActions>
                                     <Button size="medium" color="secondary" variant='outlined' onClick={handleProjectOne}>
@@ -145,7 +145,7 @@ const Projects = () => {
                                 <CardContent>
                                     <Typography gutterBottom variant="h4">
                                         scheduling system
-                                        </Typography>
+                                    </Typography>
                                     {/* <Typography variant="body2" color="textSecondary" component="p">
                                         An app that takes microphone input and converts it into an audio visualization
                                         <br></br>
@@ -153,7 +153,7 @@ const Projects = () => {
                                         </Typography> */}
                                     <Typography variant="body1" color="textSecondary" component="p">
                                         ExpressJS <span>&#8226;</span> HTML/CSS <span>&#8226;</span> SQL
-                                        </Typography>
+                                    </Typography>
                                 </CardContent>
                                 <CardActions>
                                     <Button size="medium" color="secondary" variant='outlined' onClick={handleProjectTwo}>
@@ -171,7 +171,7 @@ const Projects = () => {
                                 <CardContent>
                                     <Typography gutterBottom variant="h4">
                                         spotify classification
-                                        </Typography>
+                                    </Typography>
                                     {/* <Typography variant="body2" color="textSecondary" component="p">
                                         An app that takes microphone input and converts it into an audio visualization
                                         <br></br>
@@ -179,7 +179,7 @@ const Projects = () => {
                                         </Typography> */}
                                     <Typography variant="body1" color="textSecondary" component="p">
                                         Python <span>&#8226;</span> scikit-learn <span>&#8226;</span> pandas <span>&#8226;</span> R <span>&#8226;</span> Spotify API
-                                        </Typography>
+                                    </Typography>
                                 </CardContent>
                                 <CardActions>
                                     <Button size="medium" color="secondary" variant='outlined' onClick={handleProjectThree}>
@@ -208,7 +208,7 @@ const Projects = () => {
                                 <CardContent>
                                     <Typography gutterBottom variant="h4">
                                         task tracker
-                                        </Typography>
+                                    </Typography>
                                     {/* <Typography variant="body2" color="textSecondary" component="p">
                                         An app that takes microphone input and converts it into an audio visualization
                                         <br></br>
@@ -216,7 +216,7 @@ const Projects = () => {
                                         </Typography> */}
                                     <Typography variant="body1" color="textSecondary" component="p">
                                         Python <span>&#8226;</span> Django <span>&#8226;</span> Bootstrap
-                                        </Typography>
+                                    </Typography>
                                 </CardContent>
                                 <CardActions>
                                     <Button size="medium" color="secondary" variant='outlined' onClick={handleProjectFour}>
@@ -257,6 +257,17 @@ const Projects = () => {
                             <Button variant='outlined' onClick={handleClose} color='secondary'>
                                 close
                             </Button>
+                            <IconButton
+                                className={links}
+                                disableRipple
+                                href='https://github.com/li-matthew/visualizer'
+                                target='_blank'
+                            >
+                                <GitHubIcon
+                                    color='secondary'
+                                    fontSize='default'
+                                />
+                            </IconButton>
                         </DialogActions>
                     </Dialog>
                     <Dialog onClose={handleClose} open={projectTwo} maxWidth='sm'>
@@ -303,6 +314,17 @@ const Projects = () => {
                             <Button variant='outlined' onClick={handleClose} color='secondary'>
                                 close
                             </Button>
+                            <IconButton
+                                className={links}
+                                disableRipple
+                                href='https://github.com/li-matthew/SpotifyProject'
+                                target='_blank'
+                            >
+                                <GitHubIcon
+                                    color='secondary'
+                                    fontSize='default'
+                                />
+                            </IconButton>
                         </DialogActions>
                     </Dialog>
                     <Dialog onClose={handleClose} open={projectFour} maxWidth='sm'>
@@ -314,7 +336,7 @@ const Projects = () => {
                         <DialogContent>
                             <img src={todo} className={dialogImage} />
                             <Typography gutterBottom>
-                                A to-do list application that keeps track of added tasks including due dates. Tasks can be added with a description, category and due date. 
+                                A to-do list application that keeps track of added tasks including due dates. Tasks can be added with a description, category and due date.
                                 Once added, they can either be deleted or marked as complete.
                             </Typography>
                             <Typography variant="body1" color="textSecondary" component="p">
@@ -325,6 +347,17 @@ const Projects = () => {
                             <Button variant='outlined' onClick={handleClose} color='secondary'>
                                 close
                             </Button>
+                            <IconButton
+                                className={links}
+                                disableRipple
+                                href='https://github.com/li-matthew/todoapp'
+                                target='_blank'
+                            >
+                                <GitHubIcon
+                                    color='secondary'
+                                    fontSize='default'
+                                />
+                            </IconButton>
                         </DialogActions>
                     </Dialog>
                 </Container>
