@@ -4,7 +4,7 @@ import purdueImage from './media/purdue.svg';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import viewResume from './media/MatthewLi-se.pdf'
+import viewResume from './media/MatthewLi-r.pdf'
 import DescriptionRoundedIcon from '@material-ui/icons/DescriptionRounded';
 
 const useStyles = makeStyles(() => ({
