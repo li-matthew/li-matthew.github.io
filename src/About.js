@@ -125,7 +125,7 @@ const About = () => {
                                 Purdue University<br></br>
                                 West Lafayette, Indiana<br></br>
                                 B.S. in Computer Science, Data Science<br></br>
-                                August 2018 - May 2022
+                                August 2018 - December 2021
                             </Typography>
                             <img src={purdueImage} className={image} />
                         </Grid>
