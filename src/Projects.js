@@ -152,7 +152,7 @@ const Projects = () => {
                                         <br></br>
                                         </Typography> */}
                                     <Typography variant="body1" color="textSecondary" component="p">
-                                        ExpressJS <span>&#8226;</span> HTML/CSS <span>&#8226;</span> SQL
+                                        Express <span>&#8226;</span> HTML/CSS <span>&#8226;</span> SQL
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -284,7 +284,7 @@ const Projects = () => {
                                 Students can sign up for available help sessions for their enrolled courses.
                             </Typography>
                             <Typography variant="body1" color="textSecondary" component="p">
-                                ExpressJS <span>&#8226;</span> HTML/CSS <span>&#8226;</span> SQL
+                                Express <span>&#8226;</span> HTML/CSS <span>&#8226;</span> SQL
                             </Typography>
                         </DialogContent>
                         <DialogActions>
